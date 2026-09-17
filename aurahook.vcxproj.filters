@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{11111111-1111-1111-1111-111111111111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{22222222-2222-2222-2222-222222222222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\debug">
+      <UniqueIdentifier>{22222222-2222-2222-2222-222222222223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\hooks">
+      <UniqueIdentifier>{22222222-2222-2222-2222-222222222224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\interfaces">
+      <UniqueIdentifier>{22222222-2222-2222-2222-222222222225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\memory">
+      <UniqueIdentifier>{22222222-2222-2222-2222-222222222226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\window">
+      <UniqueIdentifier>{22222222-2222-2222-2222-222222222227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\keybinds">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\legit">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\misc">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\rage">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\settings">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\skins">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\visuals">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\visuals\materials">
+      <UniqueIdentifier>{33333333-3333-3333-3333-333333333340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui">
+      <UniqueIdentifier>{44444444-4444-4444-4444-444444444444}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\gui">
+      <UniqueIdentifier>{44444444-4444-4444-4444-444444444445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\theme">
+      <UniqueIdentifier>{44444444-4444-4444-4444-444444444446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\imgui">
+      <UniqueIdentifier>{55555555-5555-5555-5555-555555555555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\valve">
+      <UniqueIdentifier>{66666666-6666-6666-6666-666666666666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\valve\entity">
+      <UniqueIdentifier>{66666666-6666-6666-6666-666666666667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\valve\math">
+      <UniqueIdentifier>{66666666-6666-6666-6666-666666666668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\valve\schema">
+      <UniqueIdentifier>{66666666-6666-6666-6666-666666666669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\widgets">
+      <UniqueIdentifier>{77777777-7777-7777-7777-777777777777}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\main.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\debug\debug.cpp">
+      <Filter>src\core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\hooks\hooks.cpp">
+      <Filter>src\core\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\interfaces\interfaces.cpp">
+      <Filter>src\core\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\memory\memory.cpp">
+      <Filter>src\core\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\window\window.cpp">
+      <Filter>src\core\window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\keybinds\keybinds.cpp">
+      <Filter>src\features\keybinds</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\legit\legit.cpp">
+      <Filter>src\features\legit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\misc\misc.cpp">
+      <Filter>src\features\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\rage\rage.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\settings\settings.cpp">
+      <Filter>src\features\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\skins\econ_item_system.cpp">
+      <Filter>src\features\skins</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\skins\skins.cpp">
+      <Filter>src\features\skins</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\materials\materials.cpp">
+      <Filter>src\features\visuals\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\visuals.cpp">
+      <Filter>src\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\gui\gui.cpp">
+      <Filter>src\gui\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\theme\theme.cpp">
+      <Filter>src\gui\theme</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui.cpp">
+      <Filter>src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_draw.cpp">
+      <Filter>src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_impl_dx11.cpp">
+      <Filter>src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_impl_win32.cpp">
+      <Filter>src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_tables.cpp">
+      <Filter>src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_widgets.cpp">
+      <Filter>src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\valve\entity\entity.cpp">
+      <Filter>src\valve\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\valve\math\math.cpp">
+      <Filter>src\valve\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\valve\schema\schema.cpp">
+      <Filter>src\valve\schema</Filter>
+    </ClCompile>
+    <ClCompile Include="src\widgets\custom_widgets.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\debug\debug.hpp">
+      <Filter>src\core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooks\hooks.hpp">
+      <Filter>src\core\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\interfaces\interfaces.hpp">
+      <Filter>src\core\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\memory.hpp">
+      <Filter>src\core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\window\window.hpp">
+      <Filter>src\core\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\keybinds\keybinds.hpp">
+      <Filter>src\features\keybinds</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\legit\legit.hpp">
+      <Filter>src\features\legit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\misc\misc.hpp">
+      <Filter>src\features\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\rage\rage.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\settings\settings.hpp">
+      <Filter>src\features\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\skins\econ_item_system.hpp">
+      <Filter>src\features\skins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\skins\skins.hpp">
+      <Filter>src\features\skins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\materials\materials.hpp">
+      <Filter>src\features\visuals\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\materials\vmats.hpp">
+      <Filter>src\features\visuals\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\visuals.hpp">
+      <Filter>src\features\visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\gui\gui.hpp">
+      <Filter>src\gui\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\theme\theme.hpp">
+      <Filter>src\gui\theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imconfig.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imgui.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imgui_impl_dx11.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imgui_impl_win32.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imgui_internal.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imstb_rectpack.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imstb_textedit.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imstb_truetype.h">
+      <Filter>src\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\valve\entity\entity.hpp">
+      <Filter>src\valve\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\valve\math\math.hpp">
+      <Filter>src\valve\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\valve\schema\schema.hpp">
+      <Filter>src\valve\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="src\valve\sdk.hpp">
+      <Filter>src\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\widgets\custom_widgets.hpp">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
+

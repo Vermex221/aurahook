@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{A8F9026A-1234-4567-89AB-CDEF01234567}</ProjectGuid>
+    <RootNamespace>aurahook</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <VcpkgApplocalDeps>false</VcpkgApplocalDeps>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(PlatformToolset)' == ''">v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(PlatformToolset)' == ''">v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)bin\intermediates\$(Configuration)\</IntDir>
+    <TargetName>aurahook</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)bin\intermediates\$(Configuration)\</IntDir>
+    <TargetName>aurahook</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)src\imgui;$(ProjectDir)cs2_internal\ext;$(ProjectDir)Other\cs2_internal\ext;$(ProjectDir)cs2_internal\ext\menuthirdparty;$(ProjectDir)Other\cs2_internal\ext\menuthirdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dcompiler.lib;dwmapi.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)src\imgui;$(ProjectDir)cs2_internal\ext;$(ProjectDir)Other\cs2_internal\ext;$(ProjectDir)cs2_internal\ext\menuthirdparty;$(ProjectDir)Other\cs2_internal\ext\menuthirdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dcompiler.lib;dwmapi.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\hooks\hooks.cpp" />
+    <ClCompile Include="src\core\interfaces\interfaces.cpp" />
+    <ClCompile Include="src\core\main.cpp" />
+    <ClCompile Include="src\core\memory\memory.cpp" />
+    <ClCompile Include="src\core\window\window.cpp" />
+    <ClCompile Include="src\features\keybinds\keybinds.cpp" />
+    <ClCompile Include="src\features\legit\legit.cpp" />
+    <ClCompile Include="src\features\misc\misc.cpp" />
+    <ClCompile Include="src\features\rage\rage.cpp" />
+    <ClCompile Include="src\features\settings\settings.cpp" />
+    <ClCompile Include="src\features\skins\econ_item_system.cpp" />
+    <ClCompile Include="src\features\skins\skin_image.cpp" />
+    <ClCompile Include="src\features\skins\skins.cpp" />
+    <ClCompile Include="src\features\skins\vpk_vtex.cpp" />
+    <ClCompile Include="src\features\visuals\materials\materials.cpp" />
+    <ClCompile Include="src\features\visuals\visuals.cpp" />
+    <ClCompile Include="src\gui\gui\gui.cpp" />
+    <ClCompile Include="src\gui\theme\theme.cpp" />
+    <ClCompile Include="src\imgui\imgui.cpp" />
+    <ClCompile Include="src\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\valve\entity\entity.cpp" />
+    <ClCompile Include="src\valve\icons\icons.cpp" />
+    <ClCompile Include="src\valve\math\math.cpp" />
+    <ClCompile Include="src\valve\schema\schema.cpp" />
+    <ClCompile Include="src\valve\steam\steam_avatar.cpp" />
+    <ClCompile Include="src\widgets\custom_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\hooks\hooks.hpp" />
+    <ClInclude Include="src\core\interfaces\interfaces.hpp" />
+    <ClInclude Include="src\core\memory\memory.hpp" />
+    <ClInclude Include="src\core\window\window.hpp" />
+    <ClInclude Include="src\features\keybinds\keybinds.hpp" />
+    <ClInclude Include="src\features\legit\legit.hpp" />
+    <ClInclude Include="src\features\misc\misc.hpp" />
+    <ClInclude Include="src\features\rage\rage.hpp" />
+    <ClInclude Include="src\features\settings\settings.hpp" />
+    <ClInclude Include="src\features\skins\econ_item_system.hpp" />
+    <ClInclude Include="src\features\skins\skin_image.hpp" />
+    <ClInclude Include="src\features\skins\skins.hpp" />
+    <ClInclude Include="src\features\skins\vpk_vtex.hpp" />
+    <ClInclude Include="src\features\visuals\materials\materials.hpp" />
+    <ClInclude Include="src\features\visuals\materials\vmats.hpp" />
+    <ClInclude Include="src\features\visuals\visuals.hpp" />
+    <ClInclude Include="src\gui\gui\gui.hpp" />
+    <ClInclude Include="src\gui\theme\theme.hpp" />
+    <ClInclude Include="src\imgui\imconfig.h" />
+    <ClInclude Include="src\imgui\imgui.h" />
+    <ClInclude Include="src\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="src\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="src\imgui\imgui_internal.h" />
+    <ClInclude Include="src\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\valve\entity\entity.hpp" />
+    <ClInclude Include="src\valve\icons\icons.hpp" />
+    <ClInclude Include="src\valve\math\math.hpp" />
+    <ClInclude Include="src\valve\schema\schema.hpp" />
+    <ClInclude Include="src\valve\sdk.hpp" />
+    <ClInclude Include="src\valve\steam\steam_avatar.hpp" />
+    <ClInclude Include="src\widgets\custom_widgets.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
