@@ -1,1 +1,5 @@
+bin/
 Other/
+*.user
+*.filters
+*.vcxproj
